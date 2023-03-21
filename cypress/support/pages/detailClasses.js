@@ -1,0 +1,1 @@
+import detailClassesElements from "../elements/elementsClasses";
