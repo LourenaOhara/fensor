@@ -17,6 +17,10 @@ class DetailLogin {
     static clickButtonLogin(){
         cy.xpath(detailLoginElements.buttonEnter).click()
     }
+
+    static clickButtonList(){
+        cy.xpath(detailLoginElements.buttonList).click()
+    }
 }
 
 export default DetailLogin
