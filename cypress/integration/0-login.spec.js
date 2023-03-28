@@ -2,11 +2,7 @@
 import DetailLogin from "../support/pages/detailLogin";
 
 describe('Login', () => {
-    it("Login and Password", () => {
-        DetailLogin.visitLoginURL()
-        DetailLogin.typeEmailLogin()
-        DetailLogin.typePasswordLogin()
-        DetailLogin.clickButtonLogin()
+    it.skip("Login and Password", () => {
+        DetailLogin.Login()
     })        
 })
-

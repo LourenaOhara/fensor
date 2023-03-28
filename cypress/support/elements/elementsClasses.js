@@ -1,7 +1,41 @@
 const detailClassesElements = {
     
     linkClasses: "//*[@id='root']//nav/a[contains(text(), 'Turmas')]",
-    buttonAddClass: "//*[@id='root']//button[contains(text(), 'Adicionar turma')]"
+    buttonAddClass: "//*[@id='root']//button[contains(text(), 'Adicionar turma')]",
+    divAddClass: "//*[@id='add_aluno']/div/h3[contains(text(), 'Incluir turma')]",
+    inputNameClass: "//*[@id='add_aluno']//form/div[1]/div/input",
+    labelClassStatus: "//*[@id='add_aluno']//form/div[2]/div[1]//label",
+    selectStatusClass: "//*[@id='add_aluno']//form/div[2]/div[1]//select",
+    labelWeekDay: "//*[@id='add_aluno']//form/div[3]/div[1]//label",
+    selectWeekDay: "select[id='dias_semana']",
+    labelHourDay: "//*[@id='add_aluno']//form/div[4]/div/label",
+    selectHourDay: "//*[@id='add_aluno']//form/div[4]/div/select",
+    labelAddStudent: "//*[@id='add_aluno']//form/div[6]/label",
+    selectAddStudent: "//*[@id='add_aluno']//form/div[6]/select",
+    labelAddWorker: "//*[@id='add_aluno']//form/div[8]/label",
+    selectAddWorker: "//*[@id='add_aluno']//form/div[8]/select",
+    labelAge: "//*[@id='add_aluno']//form/div[10]/label",
+    selectAge: "//*[@id='add_aluno']//form/div[10]/select",
+    labelClassWeek: "//*[@id='add_aluno']//form/div[12]//label",
+    inputClassWeek: "//*[@id='add_aluno']//form/div[12]//input",
+    labelRateForgetCard: "//*[@id='add_aluno']//form/div[13]//label",
+    inputRateForgetCard: "//*[@id='add_aluno']//form/div[13]//input",
+    labelRateCard: "//*[@id='add_aluno']//form/div[14]//label",
+    inputRateCard: "//*[@id='add_aluno']//form/div[14]//input",
+    labelSearchClass: "//*[@id='root']//div[3]//h2[contains(text(), 'Procurar')]",
+    labelNameSearchClass: "//*[@id='root']//div[3]/form/div[1]/label[contains(text(), 'Nome')]",
+    inputNameSearchClass: "//*[@id='root']//div[3]/form/div[1]/input",
+    buttonSearchClass: "//*[@id='root']//div[3]//button[contains(text(), 'Buscar')]",
+    labelRegisteredClass: "//*[@id='root']//div[3]/div[1]/h2[contains(text(), 'Turmas cadastradas')]",
+    divSearchClass: "//div[@class='content_card']//span[contains(.,'Tritão Grupo de Nado')]",
+    buttonEditDivClass: "//div[@class='content_card']//span[contains(.,'Alterar')]",
+    buttonEditClass: "//*[@id='add_aluno']//form/button[contains(text(), 'Alterar turma')]",
+    divEditSuccess: "//*[@id='add_aluno']/div/div[2]/strong[contains(text(), 'Sucesso!')]",
+    buttonSeeDivClass: "//*[@id='root']//div[2]/div[3]/div[2]//a[contains(.,'Ver')]",
+    divSeeClassName: "//*[@id='root']/body//main/div[1]/div/div[1]/h2",
+    divSeeWorkers: "//*[@id='root']//div[2]/div[1]/div[1]/h2",
+    divSeeStudents: "//*[@id='root']//div[2]/div[2]/div[1]/h2"
 }
+
 
 export default detailClassesElements
