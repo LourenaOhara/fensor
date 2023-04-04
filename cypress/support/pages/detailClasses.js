@@ -10,6 +10,11 @@ class DetailClasses {
         cy.xpath(detailClassesElements.buttonAddClass).click()
     }
 
+    static clickIncludeClass(){
+        cy.xpath(detailClassesElements.buttonIncludeClass).should('be.visible')
+        cy.xpath(detailClassesElements.buttonIncludeClass).click()
+    }
+
     static validTextAddClass(){
         cy.xpath(detailClassesElements.divAddClass).should('be.visible') 
     }
@@ -108,6 +113,17 @@ class DetailClasses {
         cy.xpath(detailClassesElements.divSeeClassName).should('be.visible')
         cy.xpath(detailClassesElements.divSeeWorkers).should('be.visible')
         cy.xpath(detailClassesElements.divSeeStudents).should('be.visible')
+    }
+
+    static validNoneClass(){
+        cy.xpath(detailClassesElements.labelRegisteredClass).should('be.visible')
+        cy.xpath(detailClassesElements.divNoneClass).should('not.be.visible')
+    }
+
+    static validError(){
+        cy.xpath(detailClassesElements.divAddClass).scrollIntoView().should('be.visible')
+        cy.xpath(detailClassesElements.divError).should('be.visible')
+        cy.get('strong').should('have.text','Atenção! ')
     }
 }
 

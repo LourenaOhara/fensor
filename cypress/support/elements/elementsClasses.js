@@ -3,6 +3,7 @@ const detailClassesElements = {
     linkClasses: "//*[@id='root']//nav/a[contains(text(), 'Turmas')]",
     buttonAddClass: "//*[@id='root']//button[contains(text(), 'Adicionar turma')]",
     divAddClass: "//*[@id='add_aluno']/div/h3[contains(text(), 'Incluir turma')]",
+    buttonIncludeClass: "//*[@id='add_aluno']/div/form/button[contains(text(), 'Incluir turma')]",
     inputNameClass: "//*[@id='add_aluno']//form/div[1]/div/input",
     labelClassStatus: "//*[@id='add_aluno']//form/div[2]/div[1]//label",
     selectStatusClass: "//*[@id='add_aluno']//form/div[2]/div[1]//select",
@@ -34,7 +35,9 @@ const detailClassesElements = {
     buttonSeeDivClass: "//*[@id='root']//div[2]/div[3]/div[2]//a[contains(.,'Ver')]",
     divSeeClassName: "//*[@id='root']/body//main/div[1]/div/div[1]/h2",
     divSeeWorkers: "//*[@id='root']//div[2]/div[1]/div[1]/h2",
-    divSeeStudents: "//*[@id='root']//div[2]/div[2]/div[1]/h2"
+    divSeeStudents: "//*[@id='root']//div[2]/div[2]/div[1]/h2",
+    divNoneClass: "//*[@id='root']/main/div[1]//main/div[2]/div[3]/div[2]/div/div",
+    divError: "//*[@id='add_aluno']/div/div[2]"
 }
 
 
