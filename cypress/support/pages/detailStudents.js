@@ -99,9 +99,90 @@ class DetailStudents {
         cy.xpath(detailStudentsElements.selectTrainingSchedule).click()
     }
     
+    static typeDueDate(dueDate){
+        cy.xpath(detailStudentsElements.inputDueDate).type(dueDate)
+    }
     
-    
+    static typeCodeStudent(codeStudent){
+        cy.xpath(detailStudentsElements.labelStudentCode).should('be.visible')
+        cy.xpath(detailStudentsElements.inputStudentCode).type(codeStudent)
+    }
 
+    static clickBiologicSex(biologicSex){
+        cy.xpath(detailStudentsElements.labelBiologicSex).should('be.visible')
+        cy.xpath(detailStudentsElements.selectBiologicSex).select(biologicSex)
+    }
+
+    static typeCEPStudent(cepStudent){
+        cy.xpath(detailStudentsElements.inputCEP).should('be.visible')
+        cy.xpath(detailStudentsElements.inputCEP).type(cepStudent)
+        cy.wait(1000)
+    }
+
+    static typeMotherName(motherName){
+        cy.xpath(detailStudentsElements.labelMotherName).should('be.visible')
+        cy.xpath(detailStudentsElements.inputMotherName).type(motherName)
+    }
+
+    static typeCPFMother(motherCPF){
+        cy.xpath(detailStudentsElements.labelCPFMother).should('be.visible')
+        cy.xpath(detailStudentsElements.inputCPFMother).type(motherCPF)
+    }
+
+    static typeCelMother(motherCel){
+        cy.xpath(detailStudentsElements.labelCelMother).should('be.visible')
+        cy.xpath(detailStudentsElements.inputCelMother).type(motherCel)
+    }
+
+    static typeDaddyName(daddyName){
+        cy.xpath(detailStudentsElements.labelDaddyName).should('be.visible')
+        cy.xpath(detailStudentsElements.inputDaddyName).type(daddyName)
+    }
+
+    static typeDaddyCPF(daddyCPF){
+        cy.xpath(detailStudentsElements.labelCPFDaddy).should('be.visible')
+        cy.xpath(detailStudentsElements.inputCPFDaddy).type(daddyCPF)
+    }
+
+    static typeDaddyCel(daddyCel){
+        cy.xpath(detailStudentsElements.labelCelDaddy).should('be.visible')
+        cy.xpath(detailStudentsElements.inputCelDaddy).type(daddyCel)
+    }
+
+    static typeFinalcialName(financialName){
+        cy.xpath(detailStudentsElements.labelNameFinancial).should('be.visible')
+        cy.xpath(detailStudentsElements.inputNameFinancial).type(financialName)
+    }
+
+    static typeFinalcialEmail(financialEmail){
+        cy.xpath(detailStudentsElements.labelEmailFinancial).should('be.visible')
+        cy.xpath(detailStudentsElements.inputEmailFinancial).type(financialEmail)
+    }
+
+    static typeFinalcialRG(financialRG){
+        cy.xpath(detailStudentsElements.labelRGFinancial).should('be.visible')
+        cy.xpath(detailStudentsElements.inputRGFinancial).type(financialRG)
+    }
+
+    static typeFinalcialCPF(financialCPF){
+        cy.xpath(detailStudentsElements.labelCPFFinancial).should('be.visible')
+        cy.xpath(detailStudentsElements.inputCPFFinancial).type(financialCPF)
+    }
+
+    static clickKinshipStudent(kinshipStudent){
+        cy.xpath(detailStudentsElements.labelKinship).should('be.visible')
+        cy.xpath(detailStudentsElements.selectKinship).select(kinshipStudent)
+    }
+
+    static typeFinalcialCEL(financialCEL){
+        cy.xpath(detailStudentsElements.labelCelFinancial).should('be.visible')
+        cy.xpath(detailStudentsElements.inputCelFinancial).type(financialCEL)
+    }
+
+    static typeDescription(description){
+        cy.xpath(detailStudentsElements.labelDescription).should('be.visible')
+        cy.xpath(detailStudentsElements.inputDescription).type(description)
+    }
 }
 
 export default DetailStudents
