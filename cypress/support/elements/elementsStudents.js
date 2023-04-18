@@ -52,7 +52,17 @@ const detailStudentsElements = {
     labelCelFinancial: "//*[@id='add_aluno']/div/form/div[10]/div[6]/div/label[contains(.,'Cel. Responsável Financeiro')]",
     inputCelFinancial: "//*[@id='add_aluno']/div/form/div[10]/div[6]/div/input",
     labelDescription: "//*[@id='add_aluno']/div/form/div[11]/label[contains(.,'Descrição')]",
-    inputDescription: "//*[@id='add_aluno']/div/form/div[11]/textarea"
+    inputDescription: "//*[@id='add_aluno']/div/form/div[11]/textarea",
+    divCardHeader: "//*[@id='root']/main/div[1]/div/div/main/div[1]/div[2]//h2[contains(.,'Procurar')]",
+    labelSearchNameStudent: "//*[@id='root']/main/div[1]/div/div/main/div[1]/div[2]/form/div[1]/label[contains(.,'Nome')]",
+    inputSearchNameStudent: "//*[@id='root']/main/div[1]/div/div/main/div[1]/div[2]/form/div[1]/input",
+    buttonSearchStudent: "//*[@id='root']/main/div[1]/div/div/main/div[1]/div[2]/form/button[contains(.,'Buscar')]",
+    divStudentSearch: "//*[@id='root']/main/div[1]/div/div/main/div[2]/div/div[1]/h2[contains(.,'Alunos')]",
+    divContentCardStudent: "//*[@id='root']/main/div[1]/div/div/main/div[2]/div/div[2]/div/div[2]",
+    divDetailsNameStudent: "//*[@id='root']/main/div[1]/div/div/main/div[2]/div/div[2]/div[1]/div[2]/div[1]/p",
+    spanEditStudent: "//*[@id='root']/main/div[1]/div/div/main/div[2]/div/div[2]/div[1]/span[contains(.,'Editar aluno')]",
+    buttonEditStudent: "//*[@id='add_aluno']/div/form/button[contains(.,'Alterar aluno')]",
+    modalSucess: ".modal_content > .alert"
 }
 
 export default detailStudentsElements
