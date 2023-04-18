@@ -1,5 +1,8 @@
 import detailStudentsElements from "../elements/elementsStudents";
 
+const uuid = () => Cypress._.random(0, 1e6)
+const numb = uuid()
+
 class DetailStudents {
     
     static clickStudentsLink(){
@@ -182,6 +185,53 @@ class DetailStudents {
     static typeDescription(description){
         cy.xpath(detailStudentsElements.labelDescription).should('be.visible')
         cy.xpath(detailStudentsElements.inputDescription).type(description)
+    }
+
+    static validSearchTitle(){
+        cy.xpath(detailStudentsElements.divCardHeader).should('be.visible')
+    }
+
+    static typeSearchNameStudent(nameSearch){
+        cy.xpath(detailStudentsElements.labelSearchNameStudent).should('be.visible')
+        cy.xpath(detailStudentsElements.inputSearchNameStudent).type(nameSearch)
+    }
+
+    static clickButtonSearchStudent(){
+        cy.xpath(detailStudentsElements.buttonSearchStudent).should('be.visible')
+        cy.xpath(detailStudentsElements.buttonSearchStudent).click()
+    }
+
+    static validStudentCard(){
+        cy.xpath(detailStudentsElements.divStudentSearch).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.divContentCardStudent).should('be.visible')
+    }
+
+    static invalidStudentCard(){
+        cy.xpath(detailStudentsElements.divStudentSearch).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.divContentCardStudent).should('not.exist')
+    }
+
+    static validStudentCardName(nameStudent){
+        cy.xpath(detailStudentsElements.divDetailsNameStudent).contains(nameStudent)
+    }
+
+    static clickEditStudent(){
+        cy.xpath(detailStudentsElements.spanEditStudent).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.spanEditStudent).click()
+    }
+
+    static typeEditCellNumber(){
+        cy.xpath(detailStudentsElements.inputCelStudent).clear()
+        cy.xpath(detailStudentsElements.inputCelStudent).type('3192999111'+numb)
+    }
+
+    static clickBtnEditStudent(){
+        cy.xpath(detailStudentsElements.buttonEditStudent).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.buttonEditStudent).click()
+    }
+
+    static validModalSuccess(){
+        cy.get(detailStudentsElements.modalSucess).scrollIntoView().should('be.visible')
     }
 }
 
