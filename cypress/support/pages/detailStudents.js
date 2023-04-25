@@ -1,8 +1,5 @@
 import detailStudentsElements from "../elements/elementsStudents";
 
-const uuid = () => Cypress._.random(0, 1e6)
-const numb = uuid()
-
 class DetailStudents {
     
     static clickStudentsLink(){
@@ -220,18 +217,130 @@ class DetailStudents {
         cy.xpath(detailStudentsElements.spanEditStudent).click()
     }
 
-    static typeEditCellNumber(){
+    static typeEditCellNumber(cell){
         cy.xpath(detailStudentsElements.inputCelStudent).clear()
-        cy.xpath(detailStudentsElements.inputCelStudent).type('3192999111'+numb)
+        cy.xpath(detailStudentsElements.inputCelStudent).type(cell)
     }
 
     static clickBtnEditStudent(){
         cy.xpath(detailStudentsElements.buttonEditStudent).scrollIntoView().should('be.visible')
         cy.xpath(detailStudentsElements.buttonEditStudent).click()
     }
-
+    
     static validModalSuccess(){
         cy.get(detailStudentsElements.modalSucess).scrollIntoView().should('be.visible')
+    }
+
+    static clickSeeStudent(){
+        cy.xpath(detailStudentsElements.spanSeeStudent).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.spanSeeStudent).click()
+    }
+    
+    static validStudentNameProfile(name){
+        cy.xpath(detailStudentsElements.seeStudentName).scrollIntoView().should('be.visible')
+        cy.get('h2').should('contain',name)
+    }
+
+    static validStudentsInformations(){
+        cy.xpath(detailStudentsElements.divTimeSchool).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.divNumberClasses).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.divNumberAbsences).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.divStudentsInformations).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.divFinancialResponsible).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.divClasses).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.divAbout).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.divFinancial).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.divStudentFrquency).scrollIntoView().should('be.visible')
+    }
+
+    static clickDocStudent(){
+        cy.xpath(detailStudentsElements.spanDocStudents).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.spanDocStudents).click()
+    }
+
+    static validDocTitle(){
+        cy.xpath(detailStudentsElements.divDocTitle).should('be.visible')
+    }
+    
+    static clickDocType(docType){
+        cy.xpath(detailStudentsElements.labelDocType).should('be.visible')
+        cy.xpath(detailStudentsElements.selectDocType).select(docType)
+    }
+
+    static clickCloseDoc(){
+        cy.xpath(detailStudentsElements.divCloseModal).should('be.visible')
+        cy.xpath(detailStudentsElements.divCloseModal).click()
+    }
+    
+    static clickAnamnesisStudent(){
+        cy.xpath(detailStudentsElements.spanAnamnesis).scrollIntoView().should('be.visible')
+        cy.xpath(detailStudentsElements.spanAnamnesis).click()
+    }
+
+    static validAnamnesisTitle(){
+        cy.xpath(detailStudentsElements.labelAnamnesisForm).should('be.visible')
+    }
+
+    static validAnamnesisName(){
+        cy.xpath(detailStudentsElements.labelAnamnesisName).should('be.visible')
+    }
+
+    static typeAnamnesisWeight(anamnesisWeight){
+        cy.xpath(detailStudentsElements.labelAnamnesisWeight).should('be.visible')
+        cy.xpath(detailStudentsElements.inputAnamnesisWeight).type(anamnesisWeight)
+    }
+
+    static typeAnamnesisHeight(anamnesisHeight){
+        cy.xpath(detailStudentsElements.labelAnamnesisHeight).should('be.visible')
+        cy.xpath(detailStudentsElements.inputAnamnesisHeight).type(anamnesisHeight)
+    }
+
+    static typeAnamnesisAge(){
+        cy.xpath(detailStudentsElements.labelAnamnesisAge).should('be.visible')
+    }
+
+    static typeAnamnesisIMC(anamnesisIMC){
+        cy.xpath(detailStudentsElements.labelAnamnesisIMC).should('be.visible')
+        cy.get(detailStudentsElements.inputAnamnesisIMC).type(anamnesisIMC)
+    }
+
+    static selectAnamnesisSmoke(anamnesisSmoke){
+        cy.xpath(detailStudentsElements.labelAnamnesisSmoke).should('be.visible')
+        cy.xpath(detailStudentsElements.selectAnamnesisSmoke).select(anamnesisSmoke)
+    }
+
+    static typeAnamnesisSmokeTime(){
+        cy.xpath(detailStudentsElements.labelAnamnesisSmokeTime).should('be.visible')
+        //cy.xpath(detailStudentsElements.inputAnamnesisSmokeTime).type(anamnesisSmokeTime)
+    }
+
+    static clickTableCancerOption(){
+        cy.xpath(detailStudentsElements.tableInputCancerOption).should('be.visible')
+        cy.xpath(detailStudentsElements.tableInputCancerOption).click()
+    }
+
+    static addSurgeriesPerformed(especification, howLong){
+        cy.xpath(detailStudentsElements.labelSurgeriesPerformed).scrollIntoView().should('be.visible')
+        cy.get(detailStudentsElements.addSurgeriesPerformed).click({ force: true })
+        cy.xpath(detailStudentsElements.inputEspecification).type(especification)
+        cy.xpath(detailStudentsElements.inputHowLong).type(howLong)
+    }
+
+    static addTreatment(treatment, doctorName){
+        cy.xpath(detailStudentsElements.labelTreatment).scrollIntoView().should('be.visible')
+        cy.get(detailStudentsElements.addTreatment).click({ force: true })
+        cy.xpath(detailStudentsElements.inputTreatment).type(treatment)
+        cy.xpath(detailStudentsElements.inputDoctorName).type(doctorName)
+    }
+
+    static typeAnamnesisObservations(observations){
+        cy.xpath(detailStudentsElements.labelObservations).should('be.visible')
+        cy.xpath(detailStudentsElements.inputObservations).type(observations)
+    }
+
+    static validButtonsForm(){
+        cy.xpath(detailStudentsElements.buttonSaveForm).should('be.visible')
+        cy.xpath(detailStudentsElements.buttonPrintForm).should('be.visible')
     }
 }
 
