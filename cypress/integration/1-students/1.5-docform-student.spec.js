@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-import detailLoginElements from "../../support/elements/elementsLogin";
 import DetailLogin from "../../support/pages/detailLogin";
 import DetailStudents from "../../support/pages/detailStudents";
 
