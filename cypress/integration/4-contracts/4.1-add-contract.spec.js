@@ -3,7 +3,7 @@ import DetailLogin from "../../support/pages/detailLogin";
 import DetailsContracts from "../../support/pages/detailContract";
 
 describe('Contracts', () => {
-    it.skip("Add Contract", () => {
+    it("Add Contract", () => {
         DetailLogin.Login()
         DetailsContracts.clickContractsLink()
         DetailsContracts.clickButtonAddContract()

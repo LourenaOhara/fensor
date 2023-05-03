@@ -59,7 +59,20 @@ const detailContractsElements = {
     buttonSearch: "//*[@id='root']/main/div/div/div/main/div[1]/div[2]/form/button[contains(., 'Buscar')]",
     divResultTitle: "//*[@id='root']/main/div/div/div/main/div[2]/div/div[1]/h2[contains(., 'Resultado da pesquisa')]",
     divCardSearch: "//*[@id='root']/main/div/div/div/main/div[2]/div/div[2]/div",
-    divContractNumber: "//*[@id='root']/main/div/div/div/main/div[2]/div/div[2]/div/div[2]/div[1]/p"
+    divContractNumber: "//*[@id='root']/main/div/div/div/main/div[2]/div/div[2]/div/div[2]/div[1]/p",
+    buttonEditContract: "//*[@id='root']/main/div/div/div/main/div[2]/div/div[2]/div/button[contains(., 'Editar contrato')]",
+    buttonPDFContract: "//*[@id='root']/main/div/div/div/main/div[2]/div/div[2]/div/a[contains(., 'PDF contrato')]",
+    buttonSendWhatsappContract: "//*[@id='root']/main/div/div/div/main/div[2]/div/div[2]/div/button[contains(., 'Enviar WhatsApp')]",
+    divChangeContractTitle: "//*[@id='add_noticia_comunicado']/div/h3[contains(., 'Alterar contrato')]",
+    buttonChangeContract: "//*[@id='add_noticia_comunicado']/div/form/div[14]/button[contains(., 'Alterar contrato')]",
+    divSuccessAlert: "//*[@id='message']/div/div[2]/strong[contains(., 'Sucesso!')]",
+    divWhatsappCodeTitle: "//*[@id='add_aluno']/div/h2[contains(., 'WhatsApp Web - QR CODE')]",
+    buttonConnectWhatsapp: "//*[@id='add_aluno']/div/button[contains(., 'Conectar')]",
+    divQRCodeWhatsapp: "//*[@id='add_aluno']/div/div[2]",
+    buttonWalletContract: "//*[@id='root']/main/div/div/div/main/div[2]/div/div[2]/div/span[contains(., 'Carteirinha')]",
+    divWalletContractTitle: "//*[@id='carteirinha']/div/h3[contains(., 'Carteirinha')]",
+    buttonWalletPDF: "//*[@id='carteirinha']/div/div[2]/button[contains(., 'PDF carteirinha')]",
+    butonSeeStudentContract: "//*[@id='root']/main/div/div/div/main/div[2]/div/div[2]/div/a[contains(., 'Ver aluno')]"
 }
 
 export default detailContractsElements
