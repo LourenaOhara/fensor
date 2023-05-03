@@ -56,8 +56,20 @@ class DetailsContracts {
         cy.xpath(detailContractsElements.inputAddDiscountValueContract).type(discountValueContract)
     }
 
+    static typeEditContractsDiscountValueAdd(discountValueContract){
+        cy.xpath(detailContractsElements.labelAddDiscountValueContract).scrollIntoView().should('be.visible')
+        cy.xpath(detailContractsElements.inputAddDiscountValueContract).clear()
+        cy.xpath(detailContractsElements.inputAddDiscountValueContract).type(discountValueContract)
+    }
+
     static typeContractsMonthValueAdd(monthValueContract){
         cy.xpath(detailContractsElements.labelAddMonthValueContract).should('be.visible')
+        cy.xpath(detailContractsElements.inputAddMonthValueContract).type(monthValueContract)
+    }
+
+    static typeEditContractsMonthValueAdd(monthValueContract){
+        cy.xpath(detailContractsElements.labelAddMonthValueContract).scrollIntoView().should('be.visible')
+        cy.xpath(detailContractsElements.inputAddMonthValueContract).clear()
         cy.xpath(detailContractsElements.inputAddMonthValueContract).type(monthValueContract)
     }
 
@@ -110,6 +122,12 @@ class DetailsContracts {
         cy.xpath(detailContractsElements.inputAddEndDateContract).type(endDateContract)
     }
 
+    static typeEditContractsEndDateAdd(endDateContract){
+        cy.xpath(detailContractsElements.labelAddEndDateContract).scrollIntoView().should('be.visible')
+        cy.xpath(detailContractsElements.inputAddEndDateContract).clear()
+        cy.xpath(detailContractsElements.inputAddEndDateContract).type(endDateContract)
+    }
+
     static typeContractsObservationsAdd(observationsContract){
         cy.xpath(detailContractsElements.labelAddObservationsContract).should('be.visible')
         cy.xpath(detailContractsElements.inputAddObservationsContract).type(observationsContract)
@@ -119,21 +137,8 @@ class DetailsContracts {
         cy.xpath(detailContractsElements.buttonIncludeContract).should('be.visible')
     }
 
-
-
-
-
-
-
-
-
-
-
-
-    
-
     static validSearchTitle(){
-        cy.xpath(detailContractsElements.divSearchTitle).should('be.visible')
+        cy.xpath(detailContractsElements.divSearchTitle).scrollIntoView().should('be.visible')
     }
 
     static clickTeamSearch(teamSearch){
@@ -179,9 +184,70 @@ class DetailsContracts {
     static validContractSearch(numberContract){
         cy.xpath(detailContractsElements.divResultTitle).should('be.visible')
         cy.xpath(detailContractsElements.divCardSearch).should('be.visible')
-        cy.xpath(detailContractsElements.divContractNumber).should('have.text', numberContract)
+        cy.xpath(detailContractsElements.divContractNumber).scrollIntoView().should('have.text', numberContract)
     }
 
+    static clickButtonEditContract(){
+        cy.xpath(detailContractsElements.buttonEditContract).should('be.visible')
+        cy.xpath(detailContractsElements.buttonEditContract).click()
+    }
+
+    static clickButtonPDFContract(){
+        cy.xpath(detailContractsElements.buttonPDFContract).should('be.visible')
+        cy.xpath(detailContractsElements.buttonPDFContract).click()
+    }
+
+    static validChangeContractTitle(){
+        cy.xpath(detailContractsElements.divChangeContractTitle).should('be.visible')
+    }
+    
+    static clickButtonChangeContract(){
+        cy.xpath(detailContractsElements.buttonChangeContract).should('be.visible')
+        cy.xpath(detailContractsElements.buttonChangeContract).click()
+    }
+
+    static validEditSuccessAlert(){
+        cy.xpath(detailContractsElements.divSuccessAlert).should('be.visible')
+    }
+
+    static clickButtonSendWhatsappContract(){
+        cy.xpath(detailContractsElements.buttonSendWhatsappContract).should('be.visible')
+        cy.xpath(detailContractsElements.buttonSendWhatsappContract).click()
+    }
+    
+    static validWhatsappCodeTitle(){
+        cy.xpath(detailContractsElements.divWhatsappCodeTitle).should('be.visible')
+    }
+
+    static clickButtonWalletContract(){
+        cy.xpath(detailContractsElements.buttonWalletContract).should('be.visible')
+        cy.xpath(detailContractsElements.buttonWalletContract).click()
+    }
+
+    static clickButtonConnectWhatsappContract(){
+        cy.xpath(detailContractsElements.buttonConnectWhatsapp).should('be.visible')
+        cy.xpath(detailContractsElements.buttonConnectWhatsapp).click()
+        cy.wait(3000)
+    }
+    
+    static validQRCodeWhatsapp(){
+        cy.xpath(detailContractsElements.divQRCodeWhatsapp).should('be.visible')
+    }
+
+    static validWalletContractTitle(){
+        cy.xpath(detailContractsElements.divWalletContractTitle).should('be.visible')
+    }
+
+    static clickButtonWalletPDF(){
+        cy.xpath(detailContractsElements.buttonWalletPDF).scrollIntoView().should('be.visible')
+        cy.xpath(detailContractsElements.buttonWalletPDF).click()
+    }
+
+    static clickSeeStudentContract(){
+        cy.xpath(detailContractsElements.butonSeeStudentContract).scrollIntoView().should('be.visible')
+        cy.xpath(detailContractsElements.butonSeeStudentContract).click()
+    }
+    
 }
 
 export default DetailsContracts

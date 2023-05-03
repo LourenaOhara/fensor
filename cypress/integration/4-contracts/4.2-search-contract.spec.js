@@ -21,7 +21,7 @@ describe('Contracts', () => {
         DetailLogin.Login()
         DetailsContracts.clickContractsLink()
         DetailsContracts.validSearchTitle()
-        DetailsContracts.clickTeamSearch('Bola Seis FC')
+        DetailsContracts.clickTeamSearch('Tritão Grupo de Nado')
         DetailsContracts.typeStudentSearch('Breno Oliveira')
         DetailsContracts.clickServiceSearch('PERSONAL SOCCER')
         DetailsContracts.clickStatusSearch('Ativo')
