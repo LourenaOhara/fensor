@@ -253,6 +253,11 @@ class DetailStudents {
         cy.xpath(detailStudentsElements.divStudentFrquency).scrollIntoView().should('be.visible')
     }
 
+    //usado somente no teste de frequência
+    static validStudentsFrequencyInformation(){
+        cy.xpath(detailStudentsElements.divStudentFrquency).scrollIntoView().should('be.visible')
+    }
+
     static clickDocStudent(){
         cy.xpath(detailStudentsElements.spanDocStudents).scrollIntoView().should('be.visible')
         cy.xpath(detailStudentsElements.spanDocStudents).click()
